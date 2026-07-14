@@ -1,190 +1,139 @@
-# CommerceIQ — E-Commerce Business Intelligence Dashboard
+<div align="center">
 
-A full-stack web application combining e-commerce operations with business intelligence capabilities.
+# 🛍️ CommerceIQ
 
----
+### E-Commerce Business Intelligence Dashboard
 
-## 📦 Project Structure
+## A Collaborative Software Engineering Project by
 
-```
-commerceiq/
-├── commerceiq-backend/     # Spring Boot REST API
-└── commerceiq-frontend/    # React + Vite frontend
-```
+# 👩‍💻 Nethmi Thakshila & 👨‍💻 Gihan Rajapaksha
+
+Building an intelligent platform that transforms e-commerce data into meaningful insights through analytics, automation, and modern software engineering practices.
 
 ---
 
-## 🚀 Getting Started
+![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=springboot)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-Build-red?style=for-the-badge&logo=apachemaven)
+![Status](https://img.shields.io/badge/Status-In_Development-blue?style=for-the-badge)
 
-### Prerequisites
-
-| Tool | Version |
-|------|---------|
-| Java | 17+ |
-| Maven | 3.8+ |
-| Node.js | 18+ |
-| MySQL | 8.0+ |
+</div>
 
 ---
 
-### 1. Database Setup
+# 📖 About CommerceIQ
 
-Open MySQL and run:
+CommerceIQ is a modern **E-Commerce Business Intelligence Dashboard** developed as a collaborative software engineering project by **👩‍💻 Nethmi Thakshila** and **👨‍💻 Gihan Rajapaksha**.
 
-```sql
-CREATE DATABASE IF NOT EXISTS commerceiq_db
-  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-```
+The platform is designed to help e-commerce businesses efficiently manage their operations while converting business data into meaningful insights through interactive dashboards, analytics, and reporting.
 
-No further manual setup needed — Hibernate will auto-create all tables on first run, and the `DataInitializer` bean will seed demo data.
+CommerceIQ aims to provide a centralized solution for managing essential business activities while supporting smarter, faster, and data-driven decision-making.
 
 ---
 
-### 2. Backend (Spring Boot)
+# ✨ Key Features
 
-```bash
-cd commerceiq-backend
-
-# Edit database credentials in:
-# src/main/resources/application.properties
-# Change: spring.datasource.username and spring.datasource.password
-
-# Build & run
-mvn clean install
-mvn spring-boot:run
-```
-
-The API will start at: **http://localhost:8080**
-
----
-
-### 3. Frontend (React + Vite)
-
-```bash
-cd commerceiq-frontend
-
-# Install dependencies
-npm install
-
-# Start dev server
-npm run dev
-```
-
-The frontend will start at: **http://localhost:5173**
-
-The Vite dev server proxies `/api` requests to `http://localhost:8080`.
+- 📊 Business Intelligence Dashboard
+- 📦 Product & Inventory Management
+- 🛒 Order Management
+- 💳 Payment Management
+- 👥 Customer Management
+- 🚚 Supplier Management
+- 📈 Sales Analytics
+- 📉 Business Performance Reports
+- 🔐 Authentication & Authorization
+- 📋 Data Reporting
+- 🔍 Search & Filtering
+- 📱 Responsive User Experience
 
 ---
 
-## 🔐 Default Credentials
+# 🎯 Project Objectives
 
-| Username | Password | Role |
-|----------|----------|------|
-| `admin` | `admin123` | Admin |
-| `manager` | `manager123` | Manager |
-| `staff` | `staff123` | Staff |
-
----
-
-## 🏗️ Architecture
-
-```
-React Frontend (Vite + Tailwind CSS)
-        ↓ HTTP (JWT Bearer Token)
-Spring Boot REST API (port 8080)
-        ↓ JPA / Hibernate
-MySQL Database (commerceiq_db)
-```
-
-### Backend Stack
-
-- **Spring Boot 3.2** — Application framework
-- **Spring Security + JWT** — Authentication & authorization
-- **Spring Data JPA + Hibernate** — ORM layer
-- **MySQL** — Relational database
-- **Lombok** — Boilerplate reduction
-
-### Frontend Stack
-
-- **React 18** — UI framework
-- **Vite** — Build tool
-- **Tailwind CSS** — Utility-first styling
-- **React Router v6** — Client-side routing
-- **Axios** — HTTP client
-- **Recharts** — Data visualization
+- Transform raw e-commerce data into valuable insights
+- Improve business operation efficiency
+- Support data-driven decision-making
+- Simplify inventory and order tracking
+- Provide a scalable and maintainable software solution
+- Enhance overall e-commerce management processes
 
 ---
 
-## 📋 API Endpoints
+# 🛠️ Technology Stack
 
-### Authentication
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/auth/login` | Login — returns JWT |
-| POST | `/api/auth/register` | Register new user (Admin only) |
+## Backend
 
-### Core Modules
-| Module | Base URL |
-|--------|----------|
-| Products | `/api/products` |
-| Categories | `/api/categories` |
-| Suppliers | `/api/suppliers` |
-| Customers | `/api/customers` |
-| Orders | `/api/orders` |
-| Payments | `/api/payments` |
-| Dashboard | `/api/dashboard` |
-| Reports | `/api/reports` |
-| Notifications | `/api/notifications` |
-| Users | `/api/users` |
+- Java
+- Spring Boot
+- Spring Security
+- Spring Data JPA
 
-All endpoints (except `/api/auth/login`) require `Authorization: Bearer <token>`.
+## Database
+
+- MySQL
+
+## Development Tools
+
+- Maven
+- Git
+- GitHub
 
 ---
 
-## 🧩 Modules
+# 🚧 Development Status
 
-| Module | Features |
-|--------|----------|
-| **Dashboard** | KPIs, revenue charts, order trends, top products |
-| **Products** | CRUD, search, category & supplier assignment |
-| **Categories** | CRUD for product categories |
-| **Suppliers** | Supplier management with contact info |
-| **Inventory** | Stock monitoring, low-stock alerts, adjustments |
-| **Customers** | Customer records, search, status tracking |
-| **Orders** | Full order lifecycle, status updates, item management |
-| **Payments** | Payment tracking by method and status |
-| **Reports** | Sales, inventory, customer, and payment analytics |
-| **Users** | Admin-only user & role management |
+CommerceIQ is currently under active development.
+
+New features, improvements, and Business Intelligence capabilities are continuously being implemented to create a complete solution for modern e-commerce businesses.
 
 ---
 
-## 🔒 Role-Based Access Control
+# 👥 Collaborators
 
-| Role | Access |
-|------|--------|
-| **ROLE_ADMIN** | Full access including user management |
-| **ROLE_MANAGER** | Create/update/delete most entities |
-| **ROLE_STAFF** | Read access + create orders and customers |
+<table>
+<tr>
+
+<td align="center" width="50%">
+<a href="https://github.com/thakshilaaa">
+<img src="https://github.com/thakshilaaa.png" width="140px;" alt="Nethmi Thakshila"/>
+<br><br>
+
+<b>👩‍💻 Nethmi Thakshila</b>
+<br>
+Collaborator
+
+</a>
+</td>
+
+<td align="center" width="50%">
+<a href="https://github.com/gihanrajapaksha">
+<img src="https://github.com/gihanrajapaksha.png" width="140px;" alt="Gihan Rajapaksha"/>
+<br><br>
+
+<b>👨‍💻 Gihan Rajapaksha</b>
+<br>
+Collaborator
+
+</a>
+</td>
+
+</tr>
+</table>
 
 ---
 
-## 🛠️ Production Build
+# 🌟 Vision
 
-```bash
-# Frontend
-cd commerceiq-frontend
-npm run build
-# Output in dist/ — serve with Nginx or similar
+Our vision is to develop a powerful Business Intelligence platform that enables e-commerce businesses to understand their data, optimize their operations, and make better decisions through innovative software solutions.
 
-# Backend
-cd commerceiq-backend
-mvn clean package -DskipTests
-java -jar target/commerceiq-backend-1.0.0.jar
-```
+---
 
-For production, update `application.properties`:
-```properties
-spring.jpa.hibernate.ddl-auto=validate
-spring.datasource.url=jdbc:mysql://your-prod-host:3306/commerceiq_db
-app.cors.allowed-origins=https://your-domain.com
-```
+<div align="center">
+
+### ⭐ If you find this project interesting, consider giving it a Star!
+
+Created with ❤️ by  
+**👩‍💻 Nethmi Thakshila & 👨‍💻 Gihan Rajapaksha**
+
+</div>
